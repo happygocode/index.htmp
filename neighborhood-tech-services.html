@@ -159,18 +159,21 @@
         </ul>
       </div>
 
-      <form class="p-6 border rounded-lg" onsubmit="event.preventDefault(); alert('Thanks — form demo only. Replace with your form backend.');">
-        <label class="block text-sm font-medium">Name</label>
-        <input class="mt-1 mb-3 block w-full border px-3 py-2 rounded" placeholder="Your name" required />
+    <form action="https://formspree.io/f/mnnzlopo" method="POST" class="p-6 border rounded-lg">
+  <label class="block text-sm font-medium" for="name">Name</label>
+  <input type="text" name="name" id="name" class="mt-1 mb-3 block w-full border px-3 py-2 rounded" placeholder="Your name" required />
 
-        <label class="block text-sm font-medium">Email</label>
-        <input type="email" class="mt-1 mb-3 block w-full border px-3 py-2 rounded" placeholder="you@example.com" required />
+  <label class="block text-sm font-medium" for="email">Email</label>
+  <input type="email" name="email" id="email" class="mt-1 mb-3 block w-full border px-3 py-2 rounded" placeholder="you@example.com" required />
 
-        <label class="block text-sm font-medium">Message</label>
-        <textarea class="mt-1 mb-3 block w-full border px-3 py-2 rounded" rows="4" placeholder="How can I help?" required></textarea>
+  <label class="block text-sm font-medium" for="message">Message</label>
+  <textarea name="message" id="message" class="mt-1 mb-3 block w-full border px-3 py-2 rounded" rows="4" placeholder="How can I help?" required></textarea>
 
-        <button type="submit" class="mt-2 px-4 py-2 bg-sky-500 text-white rounded">Send message</button>
-      </form>
+  <!-- Optional: to customize email subject -->
+  <input type="hidden" name="_subject" value="New Message from Neighborhood Tech Services" />
+
+  <button type="submit" class="mt-2 px-4 py-2 bg-sky-500 text-white rounded">Send message</button>
+</form>
     </div>
   </section>
 
